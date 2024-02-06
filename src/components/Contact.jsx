@@ -22,7 +22,7 @@ function Contact() {
     if (e.target.name === 'email') {
       const isValid = validateEmail(e.target.value);
       if (!isValid) {
-        setErrorMessage('Your email is invalid.');
+        setErrorMessage('Invalid email.');
       } else {
         setErrorMessage('');
       }
@@ -40,7 +40,12 @@ function Contact() {
   };
 
   return (
-    <section className="flex-row space-between">
+    <section style={{
+      display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'column',
+    alignItems: 'center',
+    }}>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">NAME</label>

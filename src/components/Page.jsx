@@ -4,6 +4,8 @@ import PageContent from './PageContent';
 import { capitalizeFirstLetter } from '../utils/helpers';
 import { Outlet } from 'react-router-dom';
 
+import dreamLand from '../assets/images/dreamland.png';
+
 function Page({ activePage }) {
     activePage = activePage.substring(1);
 
